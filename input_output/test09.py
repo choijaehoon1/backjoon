@@ -1,0 +1,10 @@
+str = input()
+str = str.split(' ')
+x = int(str[0])
+y = int(str[1])
+print(x+y)
+print(x-y)
+print(x*y)
+print(x//y)
+print(x%y)
+
