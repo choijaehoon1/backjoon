@@ -6,8 +6,8 @@ for i in range(n):
 array.sort()
 # print(array)    
 
-start = array[1] - array[0]
-end = array[-1] - array[0]
+start = 0
+end = max(array)
 
 result = 0
 while start<=end:
@@ -20,8 +20,8 @@ while start<=end:
             value = array[i]
             count +=1
     if count >=c:
-        start = mid +1
         result = mid
+        start = mid +1
     else:
         end = mid -1            
 print(result)
