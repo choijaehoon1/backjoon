@@ -1,6 +1,6 @@
 from collections import deque
-
-def bfs(x,y,array,visit):
+import sys
+def bfs(x,y):
     q = deque()
     q.append([x,y])
     visit[x][y] = 1
@@ -18,15 +18,14 @@ def bfs(x,y,array,visit):
 dx = [-2,-1,1,2,2,1,-1,-2]
 dy = [1,2,2,1,-1,-2,-2,-1]
 
-tc = int(input())
+tc = int(sys.stdin.readline().rstrip())
 for _ in range(tc):
-    l = int(input())
+    l = int(sys.stdin.readline().rstrip())
     board = [[0]*l for _ in range(l)]
     visit = [[0]*l for _ in range(l)]
 
-    start_x,start_y = map(int, input().split())
-    end_x,end_y = map(int, input().split())
+    start_x,start_y = map(int, sys.stdin.readline().rstrip().split())
+    end_x,end_y = map(int, sys.stdin.readline().rstrip().split())
     result = int(1e9)
-    bfs(start_x,start_y,board,visit)
+    bfs(start_x,start_y)
     print(board[end_x][end_y])
-
